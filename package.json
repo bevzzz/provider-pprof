@@ -1,0 +1,42 @@
+{
+  "name": "@bevzzz/provider-pprof",
+  "version": "1.0.0",
+  "description": "OpenCtx provider that annotates Go functions with their associated CPU time and memory allocations.",
+  "type": "module",
+  "main": "dist/bundle.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "vitest",
+    "build": "tsc --build",
+    "bundle": "tsc --build && esbuild --log-level=error --bundle --platform=node --format=esm --outfile=dist/bundle.js index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bevzzz/provider-pprof.git"
+  },
+  "keywords": [
+    "openctx",
+    "pprof",
+    "profiling",
+    "sourcegraph-cody"
+  ],
+  "author": "Dmytro Solovei <dmytro.y.solovei@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bevzzz/provider-pprof/issues"
+  },
+  "homepage": "https://github.com/bevzzz/provider-pprof#readme",
+  "dependencies": {
+    "@openctx/provider": "^0.0.20",
+    "vitest": "^2.1.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
