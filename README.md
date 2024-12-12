@@ -58,11 +58,6 @@ mutex        - stack traces of holders of contended mutexes
 
 This provider only supports `heap` and CPU profile[^1].
 
-## Development
-
-- [Source code](https://sourcegraph.com/github.com/sourcegraph/openctx/-/tree/provider/pprof)
-- License: MIT
-
 ____
 
 [^1]: The CPU profile is not available as `runtime/pprof.Profile` and has a special API.
